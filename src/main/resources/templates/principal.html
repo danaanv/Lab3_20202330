@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Principal</title>
 </head>
 <body>
-$END$
+<h1>Lista de Hospitales</h1>
+<br>
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Telefono</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="hospital, obj: ${lista_hospitales}">
+        <td th:text="${obj.index+1}"></td>
+        <td th:text="${hospital.nombre}"></td>
+        <td th:text="${hospital.direccion}"></td>
+        <td th:text="${hospital.telefono}"></td>
+        <td><a th:href="@{'/doctor?id=' + ${hospital.id}}">Mostrar Doctores</a></td>
+        <td><a th:text="@{'/paciente?id=' + ${hospital.id}}">Mostrar Pacientes</a></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
