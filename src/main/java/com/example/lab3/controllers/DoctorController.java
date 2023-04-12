@@ -2,14 +2,11 @@ package com.example.lab3.controllers;
 
 import com.example.lab3.entity.Doctor;
 import com.example.lab3.repository.DoctorRepository;
-import com.example.lab3.repository.PacienteRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.print.Doc;
 import java.util.Optional;
 
 @Controller
